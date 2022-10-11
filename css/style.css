@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url("../img/LatarniaBg.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: "Inter", sans-serif;
+  height: 100%;
+}
+.container {
+  background: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+}
+.selCiphers {
+  background-color: white;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.gaderypolukiSection,
+.CaesarCipherSection,
+.PhoneKeypadCipher {
+  display: none;
+}
+.gaderypolukiSection h2 {
+  text-align: center;
+}
+.textareaStyle {
+  border-color: black;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 15px;
+  resize: none;
+  width: 100%;
+  min-height: 75px;
+}
+.finishBtn {
+  padding: 10px;
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid black;
+}
+.finishBtn:hover {
+  background-color: rgb(195, 194, 194);
+}
+.finishBtn:active {
+  background-color: rgb(166, 166, 166);
+}
+.active {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.numbInput {
+  border-radius: 10px;
+  padding: 5px;
+  margin: 10px;
+  width: 50%;
+  margin-right: auto;
+  margin-left: auto;
+}

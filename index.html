@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Deszyfrer</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="chooseCipher">
+        <h1 class="title">Deszyfrer</h1>
+        <select name="Cipher" id="" class="selCiphers">
+          <option value="">GADERYPOLUKI</option>
+          <option value="">Szyfr cezara</option>
+          <option value="">Szyfr komórkowy</option>
+        </select>
+      </div>
+      <div class="textToDecodeBox">
+        <h2 style="font-size: 15px; margin: 10px">
+          Tekst do zaszyfrowania/odszyfrowania
+        </h2>
+        <textarea
+          name="cipherTranslateBox"
+          class="cipherTranslateBox textareaStyle"
+          cols="50"
+          rows="10"
+        ></textarea>
+        <p id="errValue"></p>
+      </div>
+      <div class="gaderypolukiSection active">
+        <h2 style="font-size: 15px">Wybierz klucz</h2>
+        <select name="chooseKey" id="gaderypolukiKey" class="selCiphers">
+          <option value="GA-DE-RY-PO-LU-KI">GA-DE-RY-PO-LU-KI</option>
+          <option value="KO-NI-EC-MA-TU-RY">KO-NI-EC-MA-TU-RY</option>
+          <option value="MA-LI-NO-WE-BU-TY">MA-LI-NO-WE-BU-TY</option>
+        </select>
+
+        <div style="margin: 10px">
+          <button id="gaderypolukiEncode" class="finishBtn">
+            Zaszyfruj / odszyfruj
+          </button>
+        </div>
+      </div>
+      <div class="CaesarCipherSection">
+        <h2 style="font-size: 15px">Wybierz klucz</h2>
+        <input class="numbInput" type="number" name="" value="4" id="" />
+
+        <div style="margin: 10px">
+          <button id="caesarCipherEncode" class="finishBtn">Zaszyfruj</button>
+          <button id="caesarCipherDecode" class="finishBtn">odszyfruj</button>
+        </div>
+      </div>
+      <div class="PhoneKeypadCipher">
+        <div style="margin: 10px">
+          <button id="phoneKeypadEncode" class="finishBtn">Zaszyfruj</button>
+          <button id="phoneKeypadDecode" class="finishBtn">odszyfruj</button>
+        </div>
+      </div>
+      <div class="resultBox">
+        <h2 style="font-size: 15px; margin: 10px">wynik</h2>
+        <textarea
+          name="resultBox"
+          class="textareaStyle"
+          id="resultBox"
+          cols="50"
+          rows="10"
+          readonly
+        ></textarea>
+        <button id="copyResult" class="finishBtn">skopiuj</button>
+      </div>
+    </div>
+
+    <script src="scripts/script.js"></script>
+  </body>
+</html>
