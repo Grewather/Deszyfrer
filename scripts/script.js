@@ -179,6 +179,7 @@ let encodeGaderypoluki = (decodeTxt) => {
 
 //Phone keypad cipher
 phoneKeypadEncode.addEventListener("click", () => {
+  alert("ta");
   let lowerTxtDecode = textToDecode.value.toLowerCase();
   lowerTxtDecode = lowerTxtDecode.replace(
     /a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p|r|s|t|u|v|w|y|z/gi,
