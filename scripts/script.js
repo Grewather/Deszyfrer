@@ -10,6 +10,8 @@ let gaderySectKey = document.querySelector("#gaderypolukiKey");
 
 const gaderypolukiEncode = document.querySelector("#gaderypolukiEncode");
 
+const phoneKeypadEncode = document.querySelector("#phoneKeypadEncode");
+
 const caesarCipherEncode = document.querySelector("#caesarCipherEncode");
 const errorInf = document.querySelector("#errorInf");
 
@@ -91,6 +93,33 @@ const malinowebutyKey = {
   y: "t",
   Y: "T",
 };
+
+const PhoneKeypadKeyForEncode = {
+  a: "2|",
+  b: "22|",
+  c: "222|",
+  d: "3|",
+  e: "33|",
+  f: "333|",
+  g: "4|",
+  h: "44|",
+  i: "444|",
+  j: "5|",
+  k: "55|",
+  l: "555|",
+  m: "6|",
+  n: "66|",
+  o: "666|",
+  p: "7|",
+  r: "77|",
+  s: "777|",
+  t: "8|",
+  u: "88|",
+  v: "888|",
+  w: "9|",
+  y: "99|",
+  z: "999|",
+};
 // zmiana sekcji
 selectCipherType.onchange = (e) => {
   let selectedValue =
@@ -148,7 +177,18 @@ let encodeGaderypoluki = (decodeTxt) => {
   }
 };
 
-//
+//Phone keypad cipher
+phoneKeypadEncode.addEventListener("click", () => {
+  let lowerTxtDecode = textToDecode.value.toLowerCase();
+  lowerTxtDecode = lowerTxtDecode.replace(
+    /a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p|r|s|t|u|v|w|y|z/gi,
+    (let = (mat) => {
+      return PhoneKeypadKeyForEncode[mat];
+    })
+  );
+  showResult(lowerTxtDecode.split("|").join(" "));
+});
+
 let showResult = (textToShow) => {
   resultBox.value = textToShow;
 };
