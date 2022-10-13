@@ -8,6 +8,7 @@
 body {
   display: flex;
   align-items: center;
+  flex-direction: column;
   justify-content: center;
   background: url("../img/LatarniaBg.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -17,7 +18,7 @@ body {
   font-family: "Inter", sans-serif;
   height: 100%;
 }
-.container {
+main {
   background: rgba(255, 255, 255, 0.4);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(0px);
@@ -76,4 +77,25 @@ body {
   width: 50%;
   margin-right: auto;
   margin-left: auto;
+}
+footer {
+  background: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+  font-size: 16px;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+  color: black;
+  font-weight: 700;
+}
+footer > p a {
+  text-decoration: none;
+}
+footer > p > a:visited {
+  color: black;
+}
+footer > p > a:hover {
+  color: rgb(22, 22, 22);
 }

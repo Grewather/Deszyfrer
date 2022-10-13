@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <div class="container">
+    <main class="container">
       <div class="chooseCipher">
         <h1 class="title">Deszyfrer</h1>
         <select name="Cipher" id="" class="selCiphers">
@@ -44,6 +44,7 @@
         </div>
       </div>
       <div class="CaesarCipherSection">
+        <p>Szyfr cezara obecnie nie działa</p>
         <h2 style="font-size: 15px">Wybierz klucz</h2>
         <input class="numbInput" type="number" name="" value="4" id="" />
 
@@ -53,6 +54,9 @@
         </div>
       </div>
       <div class="PhoneKeypadCipher">
+        <p id="phoneInfo">
+          Przy odszyrowaniu każde słowo oddziel wykrzyknikiem! np. "2! 22! 333!"
+        </p>
         <div style="margin: 10px">
           <button id="phoneKeypadEncode" class="finishBtn">Zaszyfruj</button>
           <button id="phoneKeypadDecode" class="finishBtn">odszyfruj</button>
@@ -70,8 +74,10 @@
         ></textarea>
         <button id="copyResult" class="finishBtn">skopiuj</button>
       </div>
-    </div>
-
+    </main>
+    <footer>
+      <p>zrobione przez <a href="https://github.com/Grewather">Grewather</a></p>
+    </footer>
     <script src="scripts/script.js"></script>
   </body>
 </html>
