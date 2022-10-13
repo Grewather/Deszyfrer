@@ -122,30 +122,30 @@ const PhoneKeypadKeyForEncode = {
   z: "999|",
 };
 const PhoneKeypadKeyForDecode = {
-  "2!": "a",
-  "22!": "b",
-  "222!": "c",
-  "3!": "d",
-  "33!": "e",
-  "333!": "f",
-  "4!": "g",
-  "44!": "h",
-  "444!": "i",
-  "5!": "j",
-  "55!": "k",
-  "555!": "l",
-  "6!": "m",
-  "66!": "n",
-  "666!": "o",
-  "7!": "p",
-  "77!": "r",
-  "777!": "s",
-  "8!": "t",
-  "88!": "u",
-  "888!": "v",
-  "9!": "w",
-  "99!": "y",
-  "999!": "z",
+  "2 ": "a",
+  "22 ": "b",
+  "222 ": "c",
+  "3 ": "d",
+  "33 ": "e",
+  "333 ": "f",
+  "4 ": "g",
+  "44 ": "h",
+  "444 ": "i",
+  "5 ": "j",
+  "55 ": "k",
+  "555 ": "l",
+  "6 ": "m",
+  "66 ": "n",
+  "666 ": "o",
+  "7 ": "p",
+  "77 ": "r",
+  "777 ": "s",
+  "8 ": "t",
+  "88 ": "u",
+  "888 ": "v",
+  "9 ": "w",
+  "99 ": "y",
+  "999 ": "z",
 };
 // zmiana sekcji
 selectCipherType.onchange = (e) => {
@@ -216,9 +216,10 @@ phoneKeypadEncode.addEventListener("click", () => {
   showResult(lowerTxtDecode.split("|").join(" "));
 });
 phoneKeypadDecode.addEventListener("click", () => {
-  let lowerTxtDecode = textToDecode.value.toLowerCase();
+  // textToDecode.value = +" ";
+  let lowerTxtDecode = textToDecode.value.toLowerCase() + " ";
   lowerTxtDecode = lowerTxtDecode.replace(
-    /2!|22!|222!|3!|33!|333!|4!|44!|444!|5!|55!|555!|6!|66!|666!|7!|77!|777!|8!|88!|888!|9!|99!|999!/gi,
+    /2 |22 |222 |3 |33 |333 |4 |44 |444 |5 |55 |555 |6 |66 |666 |7 |77 |777 |8 |88 |888 |9 |99 |999 /gi,
     (let = (mat) => {
       return PhoneKeypadKeyForDecode[mat];
     })
