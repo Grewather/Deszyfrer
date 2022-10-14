@@ -8,7 +8,7 @@ simple "encryptor"
 ## TODO:
 - [x] gaderypoluki
 - [ ] caesar cipher
-- [ ] phone keypad cipher
+- [x] phone keypad cipher
 
 ## Link
 https://grewather.github.io/Deszyfrer/
